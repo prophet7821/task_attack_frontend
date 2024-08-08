@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ByteBloom Blog Platform(Frontend)
 
-## Getting Started
+## Description
+ByteBloom Blog Platform's frontend allows users to explore, create, and manage blog posts. The platform features user authentication, post creation, and search functionality. Built using Next.js 14 and TypeScript, it ensures a seamless and dynamic user experience.
 
-First, run the development server:
+
+## Tech Stack
+- **Frontend**: NextJS 14 with TypeScript
+- **Styling**: Material UI
+
+## Minimum Requirements
+- Node.js (>=14.x)
+- Yarn
+
+## Setup Instructions
+
+### Package Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
+The server will start on http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Pages
 
-## Learn More
+### `/` - HomePage
+Displays all available posts. Users can browse and read posts.
 
-To learn more about Next.js, take a look at the following resources:
+### `/login` - Login Page
+Allows users to log in using their email and password.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `/signUp` - SignUp Page
+Enables new users to create an account by providing their name, email, and password.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### `/[postID]` - Individual Post Page
+Displays the content of a specific post identified by its `postID`.
 
-## Deploy on Vercel
+### `/dashboard` - Dashboard Page
+Authenticated users can create new blog posts here.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Search Functionality
+The NavBar includes a search input where users can type an author's name and hit enter to search for posts by that author.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## API Integration
+The frontend interacts with the backend via API endpoints. Ensure the backend is running.
+
+## Example Usage
+
+1. **Home Page**:
+    - Access all posts.
+    - Browse through the list of posts.
+    - Use the search functionality to find posts by a specific author.
+
+2. **Login Page**:
+    - Navigate to `/login`.
+    - Enter email and password to log in.
+
+3. **Sign Up Page**:
+    - Navigate to `/signUp`.
+    - Provide name, email, and password to create a new account.
+
+4. **Individual Post Page**:
+    - Navigate to a specific post using its ID, e.g., `/12345`.
+    - Read the full content of the post.
+
+5. **Dashboard Page**:
+    - Navigate to `/dashboard` (requires authentication).
+    - Create a new post by providing a title and content.
